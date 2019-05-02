@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85B8D998227B33D2000C2F6B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D997227B33D2000C2F6B /* main.cpp */; };
+		85B8D9AC227B3414000C2F6B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D9A3227B3413000C2F6B /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,20 @@
 
 /* Begin PBXFileReference section */
 		85B8D994227B33D2000C2F6B /* Lab1-RPG */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab1-RPG"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85B8D997227B33D2000C2F6B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		85B8D99E227B3413000C2F6B /* ArenaInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArenaInterface.h; sourceTree = "<group>"; };
+		85B8D99F227B3413000C2F6B /* key_file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file2.txt; sourceTree = "<group>"; };
+		85B8D9A0227B3413000C2F6B /* file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file4.txt; sourceTree = "<group>"; };
+		85B8D9A1227B3413000C2F6B /* key_file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file4.txt; sourceTree = "<group>"; };
+		85B8D9A2227B3413000C2F6B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		85B8D9A3227B3413000C2F6B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		85B8D9A4227B3413000C2F6B /* file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file2.txt; sourceTree = "<group>"; };
+		85B8D9A5227B3414000C2F6B /* key_file5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file5.txt; sourceTree = "<group>"; };
+		85B8D9A6227B3414000C2F6B /* FighterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FighterInterface.h; sourceTree = "<group>"; };
+		85B8D9A7227B3414000C2F6B /* file3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file3.txt; sourceTree = "<group>"; };
+		85B8D9A8227B3414000C2F6B /* file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file1.txt; sourceTree = "<group>"; };
+		85B8D9A9227B3414000C2F6B /* file5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file5.txt; sourceTree = "<group>"; };
+		85B8D9AA227B3414000C2F6B /* key_file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file1.txt; sourceTree = "<group>"; };
+		85B8D9AB227B3414000C2F6B /* key_file3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file3.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +70,20 @@
 		85B8D996227B33D2000C2F6B /* Lab1-RPG */ = {
 			isa = PBXGroup;
 			children = (
-				85B8D997227B33D2000C2F6B /* main.cpp */,
+				85B8D99E227B3413000C2F6B /* ArenaInterface.h */,
+				85B8D9A6227B3414000C2F6B /* FighterInterface.h */,
+				85B8D9A8227B3414000C2F6B /* file1.txt */,
+				85B8D9A4227B3413000C2F6B /* file2.txt */,
+				85B8D9A7227B3414000C2F6B /* file3.txt */,
+				85B8D9A0227B3413000C2F6B /* file4.txt */,
+				85B8D9A9227B3414000C2F6B /* file5.txt */,
+				85B8D9AA227B3414000C2F6B /* key_file1.txt */,
+				85B8D99F227B3413000C2F6B /* key_file2.txt */,
+				85B8D9AB227B3414000C2F6B /* key_file3.txt */,
+				85B8D9A1227B3413000C2F6B /* key_file4.txt */,
+				85B8D9A5227B3414000C2F6B /* key_file5.txt */,
+				85B8D9A3227B3413000C2F6B /* main.cpp */,
+				85B8D9A2227B3413000C2F6B /* README.md */,
 			);
 			path = "Lab1-RPG";
 			sourceTree = "<group>";
@@ -118,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85B8D998227B33D2000C2F6B /* main.cpp in Sources */,
+				85B8D9AC227B3414000C2F6B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
