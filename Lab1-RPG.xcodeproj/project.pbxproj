@@ -33,9 +33,9 @@
 		854C016D227BC5B500077C1B /* Archer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Archer.h; sourceTree = "<group>"; };
 		85B8D994227B33D2000C2F6B /* Lab1-RPG */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab1-RPG"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B8D99E227B3413000C2F6B /* ArenaInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArenaInterface.h; sourceTree = "<group>"; };
-		85B8D99F227B3413000C2F6B /* key_file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file2.txt; sourceTree = "<group>"; };
+		85B8D99F227B3413000C2F6B /* key_file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = key_file2.txt; path = External/key_file2.txt; sourceTree = "<group>"; };
 		85B8D9A0227B3413000C2F6B /* file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file4.txt; sourceTree = "<group>"; };
-		85B8D9A1227B3413000C2F6B /* key_file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file4.txt; sourceTree = "<group>"; };
+		85B8D9A1227B3413000C2F6B /* key_file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = key_file4.txt; path = External/key_file4.txt; sourceTree = "<group>"; };
 		85B8D9A2227B3413000C2F6B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		85B8D9A3227B3413000C2F6B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		85B8D9A4227B3413000C2F6B /* file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file2.txt; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		85B8D9A6227B3414000C2F6B /* FighterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FighterInterface.h; sourceTree = "<group>"; };
 		85B8D9A7227B3414000C2F6B /* file3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file3.txt; sourceTree = "<group>"; };
 		85B8D9A8227B3414000C2F6B /* file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file1.txt; sourceTree = "<group>"; };
-		85B8D9A9227B3414000C2F6B /* file5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file5.txt; sourceTree = "<group>"; };
+		85B8D9A9227B3414000C2F6B /* file5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = file5.txt; path = External/file5.txt; sourceTree = "<group>"; };
 		85B8D9AA227B3414000C2F6B /* key_file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file1.txt; sourceTree = "<group>"; };
 		85B8D9AB227B3414000C2F6B /* key_file3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file3.txt; sourceTree = "<group>"; };
 		85B8D9AD227B348C000C2F6B /* Arena.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Arena.cpp; sourceTree = "<group>"; };
@@ -82,7 +82,16 @@
 		85B8D996227B33D2000C2F6B /* Lab1-RPG */ = {
 			isa = PBXGroup;
 			children = (
-				85B8D9B0227B34DC000C2F6B /* External */,
+				85B8D9A8227B3414000C2F6B /* file1.txt */,
+				85B8D9A4227B3413000C2F6B /* file2.txt */,
+				85B8D9A7227B3414000C2F6B /* file3.txt */,
+				85B8D9A0227B3413000C2F6B /* file4.txt */,
+				85B8D9A9227B3414000C2F6B /* file5.txt */,
+				85B8D9AA227B3414000C2F6B /* key_file1.txt */,
+				85B8D99F227B3413000C2F6B /* key_file2.txt */,
+				85B8D9AB227B3414000C2F6B /* key_file3.txt */,
+				85B8D9A1227B3413000C2F6B /* key_file4.txt */,
+				85B8D9A5227B3414000C2F6B /* key_file5.txt */,
 				85B8D99E227B3413000C2F6B /* ArenaInterface.h */,
 				85B8D9A6227B3414000C2F6B /* FighterInterface.h */,
 				85B8D9AE227B348C000C2F6B /* Arena.h */,
@@ -97,23 +106,6 @@
 				85B8D9A2227B3413000C2F6B /* README.md */,
 			);
 			path = "Lab1-RPG";
-			sourceTree = "<group>";
-		};
-		85B8D9B0227B34DC000C2F6B /* External */ = {
-			isa = PBXGroup;
-			children = (
-				85B8D9A8227B3414000C2F6B /* file1.txt */,
-				85B8D9A4227B3413000C2F6B /* file2.txt */,
-				85B8D9A7227B3414000C2F6B /* file3.txt */,
-				85B8D9A0227B3413000C2F6B /* file4.txt */,
-				85B8D9A9227B3414000C2F6B /* file5.txt */,
-				85B8D9AA227B3414000C2F6B /* key_file1.txt */,
-				85B8D99F227B3413000C2F6B /* key_file2.txt */,
-				85B8D9AB227B3414000C2F6B /* key_file3.txt */,
-				85B8D9A1227B3413000C2F6B /* key_file4.txt */,
-				85B8D9A5227B3414000C2F6B /* key_file5.txt */,
-			);
-			path = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

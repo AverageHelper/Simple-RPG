@@ -5,6 +5,7 @@ Archer::Archer(std::string name, int maxHitPoints, int strength, int speed, int 
     this->maxHitPoints = maxHitPoints;
     this->hitPoints = maxHitPoints;
     this->strength = strength;
+    this->initialSpeed = speed;
     this->speed = speed;
     this->magic = magic;
     this->usedAbility = false;
@@ -35,21 +36,41 @@ int Archer::getMagic() const {
 }
 
 int Archer::getDamage() {
-    return 0;
+    return speed;
 }
 
 void Archer::takeDamage(int damage) {
+    int damageTaken = damage - (speed / 4);
     
+    if (damageTaken < 1) {
+        damageTaken = 1;
+    }
+    
+    hitPoints -= damageTaken;
 }
 
 void Archer::reset() {
-    
+    hitPoints = maxHitPoints;
+    speed = initialSpeed;
 }
 
 void Archer::regenerate() {
+    int growthFactor = (strength / 6);
     
+    if (growthFactor < 1) {
+        growthFactor = 1;
+    }
+    
+    hitPoints += growthFactor;
+    
+    if (hitPoints > maxHitPoints) {
+        hitPoints = maxHitPoints;
+    }
 }
 
 bool Archer::useAbility() {
+    // Quickstep
+    speed += 1;
+    
     return true;
 }

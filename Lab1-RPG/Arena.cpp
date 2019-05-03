@@ -13,6 +13,52 @@ Arena::~Arena() {
     fighters.clear();
 }
 
+bool Arena::getFighterInfoFromInput(std::istringstream &inputStream, std::string &name, char &typeID, int &maxHitPoints, int &strength, int &speed, int &magic) {
+    
+    // (name) (type) (maximum hit points) (strength) (speed) (magic)
+    
+    inputStream >> name;
+    if (inputStream.fail() || inputStream.eof()) {
+        inputStream.clear();
+        return false;
+    }
+    
+    inputStream >> typeID;
+    if (inputStream.fail() || inputStream.eof()) {
+        inputStream.clear();
+        return false;
+    }
+    
+    inputStream >> maxHitPoints;
+    if (inputStream.fail() || inputStream.eof()) {
+        inputStream.clear();
+        return false;
+    }
+    
+    inputStream >> strength;
+    if (inputStream.fail() || inputStream.eof()) {
+        inputStream.clear();
+        return false;
+    }
+    
+    inputStream >> speed;
+    if (inputStream.fail() || inputStream.eof()) {
+        inputStream.clear();
+        return false;
+    }
+    
+    inputStream >> magic;
+    if (inputStream.fail() || inputStream.eof()) {
+        inputStream.clear();
+        return false;
+    }
+    
+    return (maxHitPoints > 0 &&
+            strength > 0 &&
+            speed > 0 &&
+            magic > 0);
+}
+
 bool Arena::addFighter(std::string info) {
     std::istringstream infoStream;
     infoStream.str(info);
@@ -26,13 +72,23 @@ bool Arena::addFighter(std::string info) {
     int fighterSpeed = 0;
     int fighterMagic = 0;
     
-    // (name) (type) (maximum hit points) (strength) (speed) (magic)
-    infoStream >> fighterName;
-    infoStream >> fighterTypeID;
-    infoStream >> maxHitPoints;
-    infoStream >> fighterStrength;
-    infoStream >> fighterSpeed;
-    infoStream >> fighterMagic;
+    bool result = getFighterInfoFromInput(infoStream,
+                                          fighterName,
+                                          fighterTypeID,
+                                          maxHitPoints,
+                                          fighterStrength,
+                                          fighterSpeed,
+                                          fighterMagic);
+    
+    if (!result) {
+        return false;
+    }
+    
+    // rejecting any string that is not of the correct format or that would add a duplicate name to the arena.
+    if (getFighter(fighterName) != nullptr) {
+        std::cout << "We already have a fighter by that name." << std::endl;
+        return false;
+    }
     
     if (fighterTypeID == 'R') {
         // Robot
@@ -45,6 +101,10 @@ bool Arena::addFighter(std::string info) {
     } else if (fighterTypeID == 'C') {
         // Cleric
         newFighter = new Cleric(fighterName, maxHitPoints, fighterStrength, fighterSpeed, fighterMagic);
+        
+    } else {
+        // Unknown type
+        return false;
     }
     
     fighters.push_back(newFighter);
@@ -60,6 +120,7 @@ bool Arena::removeFighter(std::string name) {
         return true;
     }
     
+    std::cout << "That fighter is not in the arena." << std::endl;
     return false;
 }
 

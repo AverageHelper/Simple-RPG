@@ -12,6 +12,7 @@ private:
     int strength;
     int speed;
     int magic;
+    int mana;
     bool usedAbility;
     
 public:

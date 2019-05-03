@@ -10,6 +10,7 @@ private:
     int maxHitPoints;
     int hitPoints;
     int strength;
+    int initialSpeed;
     int speed;
     int magic;
     bool usedAbility;

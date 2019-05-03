@@ -14,6 +14,7 @@ private:
     int speed;
     int magic;
     int energy;
+    int bonusDamage;
     bool usedAbility;
     
 public:
