@@ -1,14 +1,14 @@
 #include "Robot.h"
 
-Robot::Robot() {
-    name = "Unnamed";
-    usedAbility = false;
-    maxHitPoints = 10;
-    hitPoints = 10;
-    strength = 10;
-    speed = 10;
-    energy = 10;
-    magic = 1;
+Robot::Robot(std::string name, int maxHitPoints, int strength, int speed, int magic) {
+    this->name = name;
+    this->maxHitPoints = maxHitPoints;
+    this->hitPoints = maxHitPoints;
+    this->strength = strength;
+    this->speed = speed;
+    this->magic = magic;
+    this->usedAbility = false;
+    this->energy = 10;
 }
 
 std::string Robot::getName() const {

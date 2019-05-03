@@ -1,10 +1,10 @@
 #ifndef Archer_h
 #define Archer_h
 
-#include <stdio.h>
+#include <iostream>
 #include "FighterInterface.h"
 
-class Archer : FighterInterface {
+class Archer : public FighterInterface {
 private:
     std::string name;
     int maxHitPoints;
@@ -15,7 +15,7 @@ private:
     bool usedAbility;
     
 public:
-    Archer();
+    Archer(std::string name = "Unnamed", int maxHitPoints = 10, int strength = 10, int speed = 10, int magic = 10);
     std::string getName() const;
     int getMaximumHP() const;
     int getCurrentHP() const;

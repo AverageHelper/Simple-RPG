@@ -1,10 +1,14 @@
 #ifndef Arena_h
 #define Arena_h
 
-#include <stdio.h>
+#include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 #include "ArenaInterface.h"
+#include "Robot.h"
+#include "Archer.h"
+#include "Cleric.h"
 
 class Arena : public ArenaInterface {
 public:
@@ -17,6 +21,7 @@ public:
     
 private:
     std::vector<FighterInterface*> fighters;
+    int indexOfFighterNamed(std::string name);
 };
 
 #endif /* Arena_h */

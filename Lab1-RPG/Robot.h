@@ -1,7 +1,7 @@
 #ifndef Robot_h
 #define Robot_h
 
-#include <stdio.h>
+#include <iostream>
 #include <string>
 #include "FighterInterface.h"
 
@@ -17,7 +17,7 @@ private:
     bool usedAbility;
     
 public:
-    Robot();
+    Robot(std::string name = "Unnamed", int maxHitPoints = 10, int strength = 10, int speed = 10, int magic = 10);
     std::string getName() const;
     int getMaximumHP() const;
     int getCurrentHP() const;

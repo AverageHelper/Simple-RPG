@@ -1,13 +1,13 @@
 #include "Archer.h"
 
-Archer::Archer() {
-    name = "Unnamed";
-    maxHitPoints = 0;
-    hitPoints = 0;
-    strength = 0;
-    speed = 0;
-    magic = 0;
-    usedAbility = false;
+Archer::Archer(std::string name, int maxHitPoints, int strength, int speed, int magic) {
+    this->name = name;
+    this->maxHitPoints = maxHitPoints;
+    this->hitPoints = maxHitPoints;
+    this->strength = strength;
+    this->speed = speed;
+    this->magic = magic;
+    this->usedAbility = false;
 }
 
 std::string Archer::getName() const {
