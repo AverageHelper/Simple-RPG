@@ -25,7 +25,7 @@ private:
     int indexOfFighterNamed(std::string name);
     
     /// Returns `true` if the input string is of the correct format.
-    bool getFighterInfoFromInput(std::istringstream &inputStream, std::string &name, char &typeID, int &maxHitPoints, int &strength, int &speed, int &magic);
+    bool getFighterInfoFromInput(std::string &input, std::string &name, char &typeID, int &maxHitPoints, int &strength, int &speed, int &magic);
 };
 
 #endif /* Arena_h */

@@ -13,12 +13,15 @@ Arena::~Arena() {
     fighters.clear();
 }
 
-bool Arena::getFighterInfoFromInput(std::istringstream &inputStream, std::string &name, char &typeID, int &maxHitPoints, int &strength, int &speed, int &magic) {
+bool Arena::getFighterInfoFromInput(std::string &input, std::string &name, char &typeID, int &maxHitPoints, int &strength, int &speed, int &magic) {
+    
+    std::istringstream inputStream;
+    inputStream.str(input);
     
     // (name) (type) (maximum hit points) (strength) (speed) (magic)
     
     inputStream >> name;
-    if (inputStream.fail() || inputStream.eof()) {
+    if (inputStream.fail() || inputStream.bad()) {
         inputStream.clear();
         return false;
     }
@@ -74,9 +77,6 @@ bool Arena::getFighterInfoFromInput(std::istringstream &inputStream, std::string
  *    Return true if a new fighter was added; false otherwise.
  */
 bool Arena::addFighter(std::string info) {
-    std::istringstream infoStream;
-    infoStream.str(info);
-    
     FighterInterface* newFighter = nullptr;
     
     std::string fighterName = "";
@@ -86,7 +86,7 @@ bool Arena::addFighter(std::string info) {
     int fighterSpeed = 0;
     int fighterMagic = 0;
     
-    bool result = getFighterInfoFromInput(infoStream,
+    bool result = getFighterInfoFromInput(info,
                                           fighterName,
                                           fighterTypeID,
                                           maxHitPoints,
