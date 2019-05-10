@@ -1,76 +1,51 @@
 #include "Archer.h"
 
-Archer::Archer(std::string name, int maxHitPoints, int strength, int speed, int magic) {
-    this->name = name;
-    this->maxHitPoints = maxHitPoints;
-    this->hitPoints = maxHitPoints;
-    this->strength = strength;
+Archer::Archer(std::string name, int maxHitPoints, int strength, int speed, int magic) : Fighter(name, maxHitPoints, strength, speed, magic) {
     this->initialSpeed = speed;
-    this->speed = speed;
-    this->magic = magic;
-    this->usedAbility = false;
 }
 
-std::string Archer::getName() const {
-    return name;
-}
-
-int Archer::getMaximumHP() const {
-    return maxHitPoints;
-}
-
-int Archer::getCurrentHP() const {
-    return hitPoints;
-}
-
-int Archer::getStrength() const {
-    return strength;
-}
-
-int Archer::getSpeed() const {
-    return speed;
-}
-
-int Archer::getMagic() const {
-    return magic;
-}
-
+/**
+ *    getDamage()
+ *
+ *    Returns the amount of damage a fighter will deal.
+ *
+ *    This value is equal to the Archer's speed.
+ */
 int Archer::getDamage() {
     return speed;
 }
 
-void Archer::takeDamage(int damage) {
-    int damageTaken = damage - (speed / 4);
-    
-    if (damageTaken < 1) {
-        damageTaken = 1;
-    }
-    
-    hitPoints -= damageTaken;
-}
-
+/**
+ *    reset()
+ *
+ *    Restores a fighter's current hit points to its maximum hit points.
+ *
+ *    Archer:
+ *    Also resets an Archer's current speed to its original value.
+ */
 void Archer::reset() {
-    hitPoints = maxHitPoints;
+    Fighter::reset();
     speed = initialSpeed;
 }
 
-void Archer::regenerate() {
-    int growthFactor = (strength / 6);
-    
-    if (growthFactor < 1) {
-        growthFactor = 1;
-    }
-    
-    hitPoints += growthFactor;
-    
-    if (hitPoints > maxHitPoints) {
-        hitPoints = maxHitPoints;
-    }
-}
-
+/**
+ *    useAbility()
+ *
+ *    Attempts to perform a special ability based on the type of fighter.  The
+ *    fighter will attempt to use this special ability just prior to attacking
+ *    every turn.
+ *
+ *    Archer: Quickstep
+ *    Increases the Archer's speed by one point each time the ability is used.
+ *    This bonus lasts until the reset() method is used.
+ *    This ability always works; there is no maximum bonus speed.
+ *
+ *    Return true if the ability was used; false otherwise.
+ */
 bool Archer::useAbility() {
     // Quickstep
     speed += 1;
+    usedAbility = true;
     
     return true;
 }

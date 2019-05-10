@@ -2,31 +2,16 @@
 #define Archer_h
 
 #include <iostream>
-#include "FighterInterface.h"
+#include "Fighter.h"
 
-class Archer : public FighterInterface {
+class Archer : public Fighter {
 private:
-    std::string name;
-    int maxHitPoints;
-    int hitPoints;
-    int strength;
     int initialSpeed;
-    int speed;
-    int magic;
-    bool usedAbility;
     
 public:
     Archer(std::string name = "Unnamed", int maxHitPoints = 10, int strength = 10, int speed = 10, int magic = 10);
-    std::string getName() const;
-    int getMaximumHP() const;
-    int getCurrentHP() const;
-    int getStrength() const;
-    int getSpeed() const;
-    int getMagic() const;
     int getDamage();
-    void takeDamage(int damage);
     void reset();
-    void regenerate();
     bool useAbility();
 };
 

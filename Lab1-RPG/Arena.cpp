@@ -24,32 +24,37 @@ bool Arena::getFighterInfoFromInput(std::istringstream &inputStream, std::string
     }
     
     inputStream >> typeID;
-    if (inputStream.fail() || inputStream.eof()) {
+    if (inputStream.fail() || inputStream.bad()) {
         inputStream.clear();
         return false;
     }
     
     inputStream >> maxHitPoints;
-    if (inputStream.fail() || inputStream.eof()) {
+    if (inputStream.fail() || inputStream.bad()) {
         inputStream.clear();
         return false;
     }
     
     inputStream >> strength;
-    if (inputStream.fail() || inputStream.eof()) {
+    if (inputStream.fail() || inputStream.bad()) {
         inputStream.clear();
         return false;
     }
     
     inputStream >> speed;
-    if (inputStream.fail() || inputStream.eof()) {
+    if (inputStream.fail() || inputStream.bad()) {
         inputStream.clear();
         return false;
     }
     
     inputStream >> magic;
-    if (inputStream.fail() || inputStream.eof()) {
+    if (inputStream.fail() || inputStream.bad()) {
         inputStream.clear();
+        return false;
+    }
+    
+    // Fail if there's too much input.
+    if (!inputStream.eof()) {
         return false;
     }
     
@@ -59,6 +64,15 @@ bool Arena::getFighterInfoFromInput(std::istringstream &inputStream, std::string
             magic > 0);
 }
 
+/**
+ *    addFighter(string)
+ *
+ *    Adds a new fighter to the collection of fighters in the arena. Do not allow
+ *    duplicate names.  Reject any string that does not adhere to the format
+ *    outlined in the lab specs.
+ *
+ *    Return true if a new fighter was added; false otherwise.
+ */
 bool Arena::addFighter(std::string info) {
     std::istringstream infoStream;
     infoStream.str(info);
@@ -112,6 +126,14 @@ bool Arena::addFighter(std::string info) {
     return true;
 }
 
+/**
+ *    removeFighter(string)
+ *
+ *    Removes the fighter whose name is equal to the given name.  Does nothing if
+ *    no fighter is found with the given name.
+ *
+ *    Return true if a fighter is removed; false otherwise.
+ */
 bool Arena::removeFighter(std::string name) {
     int fighterIndex = indexOfFighterNamed(name);
     
@@ -120,10 +142,18 @@ bool Arena::removeFighter(std::string name) {
         return true;
     }
     
-    std::cout << "That fighter is not in the arena." << std::endl;
+    std::cout << "Fighter not found." << std::endl;
     return false;
 }
 
+/**
+ *    getFighter(string)
+ *
+ *    Returns the memory address of a fighter whose name is equal to the given
+ *    name.  Returns NULL if no fighter is found with the given name.
+ *
+ *    Return a memory address if a fighter is found; NULL otherwise.
+ */
 FighterInterface* Arena::getFighter(std::string name) {
     int fighterIndex = indexOfFighterNamed(name);
     
@@ -131,9 +161,18 @@ FighterInterface* Arena::getFighter(std::string name) {
         return fighters.at(fighterIndex);
     }
     
+    std::cout << "Fighter not found" << std::endl;
+    
     return nullptr;
 }
 
+/**
+ *    getSize()
+ *
+ *    Returns the number of fighters in the arena.
+ *
+ *    Return a non-negative integer.
+ */
 int Arena::getSize() const {
     return static_cast<int>(fighters.size());
 }

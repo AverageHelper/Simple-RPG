@@ -9,20 +9,43 @@
 /* Begin PBXBuildFile section */
 		854C016B227BC59000077C1B /* Cleric.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854C0169227BC59000077C1B /* Cleric.cpp */; };
 		854C016E227BC5B500077C1B /* Archer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 854C016C227BC5B500077C1B /* Archer.cpp */; };
+		85B604922280D4030010B5D5 /* Fighter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85B604902280D4030010B5D5 /* Fighter.cpp */; };
 		85B8D9AC227B3414000C2F6B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D9A3227B3413000C2F6B /* main.cpp */; };
 		85B8D9AF227B348C000C2F6B /* Arena.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D9AD227B348C000C2F6B /* Arena.cpp */; };
 		85B8D9B3227B37CF000C2F6B /* Robot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D9B1227B37CF000C2F6B /* Robot.cpp */; };
+		85B9E5FF227CD6DA00A51467 /* file1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9A8227B3414000C2F6B /* file1.txt */; };
+		85B9E600227CD6DA00A51467 /* file2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9A4227B3413000C2F6B /* file2.txt */; };
+		85B9E601227CD6DA00A51467 /* file3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9A7227B3414000C2F6B /* file3.txt */; };
+		85B9E602227CD6DA00A51467 /* file4.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9A0227B3413000C2F6B /* file4.txt */; };
+		85B9E603227CD6DA00A51467 /* file5.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9A9227B3414000C2F6B /* file5.txt */; };
+		85B9E607227CDB9F00A51467 /* key_file1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9AA227B3414000C2F6B /* key_file1.txt */; };
+		85B9E608227CDB9F00A51467 /* key_file2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D99F227B3413000C2F6B /* key_file2.txt */; };
+		85B9E609227CDB9F00A51467 /* key_file3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9AB227B3414000C2F6B /* key_file3.txt */; };
+		85B9E60A227CDB9F00A51467 /* key_file4.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9A1227B3413000C2F6B /* key_file4.txt */; };
+		85B9E60B227CDB9F00A51467 /* key_file5.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B8D9A5227B3414000C2F6B /* key_file5.txt */; };
+		85B9E60C227CDBB600A51467 /* check.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 85B9E604227CD74A00A51467 /* check.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		85B8D992227B33D2000C2F6B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				85B9E60C227CDBB600A51467 /* check.sh in CopyFiles */,
+				85B9E5FF227CD6DA00A51467 /* file1.txt in CopyFiles */,
+				85B9E600227CD6DA00A51467 /* file2.txt in CopyFiles */,
+				85B9E601227CD6DA00A51467 /* file3.txt in CopyFiles */,
+				85B9E602227CD6DA00A51467 /* file4.txt in CopyFiles */,
+				85B9E603227CD6DA00A51467 /* file5.txt in CopyFiles */,
+				85B9E607227CDB9F00A51467 /* key_file1.txt in CopyFiles */,
+				85B9E608227CDB9F00A51467 /* key_file2.txt in CopyFiles */,
+				85B9E609227CDB9F00A51467 /* key_file3.txt in CopyFiles */,
+				85B9E60A227CDB9F00A51467 /* key_file4.txt in CopyFiles */,
+				85B9E60B227CDB9F00A51467 /* key_file5.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -31,11 +54,13 @@
 		854C016A227BC59000077C1B /* Cleric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cleric.h; sourceTree = "<group>"; };
 		854C016C227BC5B500077C1B /* Archer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Archer.cpp; sourceTree = "<group>"; };
 		854C016D227BC5B500077C1B /* Archer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Archer.h; sourceTree = "<group>"; };
+		85B604902280D4030010B5D5 /* Fighter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fighter.cpp; sourceTree = "<group>"; };
+		85B604912280D4030010B5D5 /* Fighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fighter.h; sourceTree = "<group>"; };
 		85B8D994227B33D2000C2F6B /* Lab1-RPG */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab1-RPG"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B8D99E227B3413000C2F6B /* ArenaInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArenaInterface.h; sourceTree = "<group>"; };
-		85B8D99F227B3413000C2F6B /* key_file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = key_file2.txt; path = External/key_file2.txt; sourceTree = "<group>"; };
+		85B8D99F227B3413000C2F6B /* key_file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file2.txt; sourceTree = "<group>"; };
 		85B8D9A0227B3413000C2F6B /* file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file4.txt; sourceTree = "<group>"; };
-		85B8D9A1227B3413000C2F6B /* key_file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = key_file4.txt; path = External/key_file4.txt; sourceTree = "<group>"; };
+		85B8D9A1227B3413000C2F6B /* key_file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file4.txt; sourceTree = "<group>"; };
 		85B8D9A2227B3413000C2F6B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		85B8D9A3227B3413000C2F6B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		85B8D9A4227B3413000C2F6B /* file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file2.txt; sourceTree = "<group>"; };
@@ -43,13 +68,14 @@
 		85B8D9A6227B3414000C2F6B /* FighterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FighterInterface.h; sourceTree = "<group>"; };
 		85B8D9A7227B3414000C2F6B /* file3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file3.txt; sourceTree = "<group>"; };
 		85B8D9A8227B3414000C2F6B /* file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file1.txt; sourceTree = "<group>"; };
-		85B8D9A9227B3414000C2F6B /* file5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = file5.txt; path = External/file5.txt; sourceTree = "<group>"; };
+		85B8D9A9227B3414000C2F6B /* file5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file5.txt; sourceTree = "<group>"; };
 		85B8D9AA227B3414000C2F6B /* key_file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file1.txt; sourceTree = "<group>"; };
 		85B8D9AB227B3414000C2F6B /* key_file3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key_file3.txt; sourceTree = "<group>"; };
 		85B8D9AD227B348C000C2F6B /* Arena.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Arena.cpp; sourceTree = "<group>"; };
 		85B8D9AE227B348C000C2F6B /* Arena.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arena.h; sourceTree = "<group>"; };
 		85B8D9B1227B37CF000C2F6B /* Robot.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Robot.cpp; sourceTree = "<group>"; };
 		85B8D9B2227B37CF000C2F6B /* Robot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
+		85B9E604227CD74A00A51467 /* check.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; lineEnding = 0; path = check.sh; sourceTree = "<group>"; wrapsLines = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +108,29 @@
 		85B8D996227B33D2000C2F6B /* Lab1-RPG */ = {
 			isa = PBXGroup;
 			children = (
+				85B8D9A2227B3413000C2F6B /* README.md */,
+				85B9E606227CD81100A51467 /* External */,
+				85B8D9A3227B3413000C2F6B /* main.cpp */,
+				85B8D99E227B3413000C2F6B /* ArenaInterface.h */,
+				85B8D9A6227B3414000C2F6B /* FighterInterface.h */,
+				85B8D9AE227B348C000C2F6B /* Arena.h */,
+				85B8D9AD227B348C000C2F6B /* Arena.cpp */,
+				85B604912280D4030010B5D5 /* Fighter.h */,
+				85B604902280D4030010B5D5 /* Fighter.cpp */,
+				85B8D9B2227B37CF000C2F6B /* Robot.h */,
+				85B8D9B1227B37CF000C2F6B /* Robot.cpp */,
+				854C016A227BC59000077C1B /* Cleric.h */,
+				854C0169227BC59000077C1B /* Cleric.cpp */,
+				854C016D227BC5B500077C1B /* Archer.h */,
+				854C016C227BC5B500077C1B /* Archer.cpp */,
+			);
+			path = "Lab1-RPG";
+			sourceTree = "<group>";
+		};
+		85B9E606227CD81100A51467 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				85B9E604227CD74A00A51467 /* check.sh */,
 				85B8D9A8227B3414000C2F6B /* file1.txt */,
 				85B8D9A4227B3413000C2F6B /* file2.txt */,
 				85B8D9A7227B3414000C2F6B /* file3.txt */,
@@ -92,20 +141,8 @@
 				85B8D9AB227B3414000C2F6B /* key_file3.txt */,
 				85B8D9A1227B3413000C2F6B /* key_file4.txt */,
 				85B8D9A5227B3414000C2F6B /* key_file5.txt */,
-				85B8D99E227B3413000C2F6B /* ArenaInterface.h */,
-				85B8D9A6227B3414000C2F6B /* FighterInterface.h */,
-				85B8D9AE227B348C000C2F6B /* Arena.h */,
-				85B8D9AD227B348C000C2F6B /* Arena.cpp */,
-				85B8D9B2227B37CF000C2F6B /* Robot.h */,
-				85B8D9B1227B37CF000C2F6B /* Robot.cpp */,
-				854C016A227BC59000077C1B /* Cleric.h */,
-				854C0169227BC59000077C1B /* Cleric.cpp */,
-				854C016D227BC5B500077C1B /* Archer.h */,
-				854C016C227BC5B500077C1B /* Archer.cpp */,
-				85B8D9A3227B3413000C2F6B /* main.cpp */,
-				85B8D9A2227B3413000C2F6B /* README.md */,
 			);
-			path = "Lab1-RPG";
+			name = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +204,7 @@
 				854C016E227BC5B500077C1B /* Archer.cpp in Sources */,
 				85B8D9AC227B3414000C2F6B /* main.cpp in Sources */,
 				854C016B227BC59000077C1B /* Cleric.cpp in Sources */,
+				85B604922280D4030010B5D5 /* Fighter.cpp in Sources */,
 				85B8D9B3227B37CF000C2F6B /* Robot.cpp in Sources */,
 				85B8D9AF227B348C000C2F6B /* Arena.cpp in Sources */,
 			);

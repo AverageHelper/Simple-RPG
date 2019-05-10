@@ -2,29 +2,15 @@
 #define Cleric_h
 
 #include <iostream>
-#include "FighterInterface.h"
+#include "Fighter.h"
 
-class Cleric : public FighterInterface {
+class Cleric : public Fighter {
 private:
-    std::string name;
-    int maxHitPoints;
-    int hitPoints;
-    int strength;
-    int speed;
-    int magic;
     int mana;
-    bool usedAbility;
     
 public:
     Cleric(std::string name = "Unnamed", int maxHitPoints = 10, int strength = 10, int speed = 10, int magic = 10);
-    std::string getName() const;
-    int getMaximumHP() const;
-    int getCurrentHP() const;
-    int getStrength() const;
-    int getSpeed() const;
-    int getMagic() const;
     int getDamage();
-    void takeDamage(int damage);
     void reset();
     void regenerate();
     bool useAbility();

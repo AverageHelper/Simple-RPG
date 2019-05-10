@@ -21,6 +21,7 @@ public:
     
 private:
     std::vector<FighterInterface*> fighters;
+    
     int indexOfFighterNamed(std::string name);
     
     /// Returns `true` if the input string is of the correct format.
